@@ -9,7 +9,7 @@ React-Native로 크로스 플랫폼 뮤직 플레이어 앱 만들기(iOS/Androi
 **사용 라이브러리**: react-native, react-native-router-flux, react-native-track-player
 
 ### 참가자
-* 최성원 [프로젝트]()
+* 최성원 [프로젝트](https://github.com/SUNGWON-CHOI-29/ChoiSungWon1901)
 * 김도형 [프로젝트](https://github.com/ehgud0670/careerboost_SOUNDGYM)
 * 정지현 [프로젝트]()
 * 장성우 [프로젝트]()
