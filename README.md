@@ -9,11 +9,11 @@ React-Native로 크로스 플랫폼 뮤직 플레이어 앱 만들기(iOS/Androi
 **사용 라이브러리**: react-native, react-native-router-flux, react-native-track-player
 
 ### 참가자
-* 최성원 [프로젝트]()
-* 김도형 [프로젝트]()
+* 최성원 [프로젝트](https://github.com/SUNGWON-CHOI-29/ChoiSungWon1901)
+* 김도형 [프로젝트](https://github.com/ehgud0670/careerboost_SOUNDGYM)
 * 정지현 [프로젝트]()
-* 장성우 [프로젝트]()
-* 이용재 [프로젝트]()
+* 장성우 [프로젝트](https://github.com/JangSungwoo/careerboost_SOUNDGYM)
+* 이용재 [프로젝트](https://github.com/dididy/careerboost_SOUNDGYM)
 
 -----
 
@@ -31,7 +31,7 @@ React-Native로 크로스 플랫폼 뮤직 플레이어 앱 만들기(iOS/Androi
 2. 개인 계정으로, 신청한 기업의 Repository fork
 3. 디렉토리(양식: 성명+기수)생성 및 브랜치 생성 후 작업
 4. commit은 1개의 기능단위로 해주실 것을 권장
-5. 기한 내에 브랜치(기수/깃헙계정)로 PR(제목 양식: 기업명 - 프로젝트명 - 성명) 
+5. 기한 내에 브랜치(기수/영어성명)로 PR(제목 양식: 기업명 - 프로젝트명 - 성명) 
 6. 코드리뷰 후, 최종 프로젝트 PR(제목 양식: 기업명 - 최종 - 성명)
 
 
