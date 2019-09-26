@@ -48,7 +48,7 @@ export default class player extends TrackPlayer.ProgressComponent {
         <View style={styles.closeButton}>
           <TouchableOpacity
             onPress={() => {
-              Actions.MinimizePlayer({data: this.props.data});
+              Actions.MinimizePlayer({data: this.props.data, isPlay: this.state.isPlay});
             }}>
             <Icon name="arrow-down" style={{fontSize: 45, color: 'gray'}} />
           </TouchableOpacity>

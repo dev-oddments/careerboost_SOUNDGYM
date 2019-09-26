@@ -10,10 +10,12 @@ import ProgressNow from '../components/ProgressNow';
 
 export default class player extends TrackPlayer.ProgressComponent {
   state = {
-    Volume: 60,
-    isPlay: 'play',
+    isPlay: '',
   };
-
+  componentDidMount() {
+      console.log(this.props.isPlay)
+      this.setState({isPlay: this.props.isPlay})
+  }
   
   _togglePlay() {
     if (this.state.isPlay === 'play') {
