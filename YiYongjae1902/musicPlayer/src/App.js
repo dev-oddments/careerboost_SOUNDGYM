@@ -6,23 +6,39 @@
  * @flow
  */
 
-import React from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import React, {Component} from 'react';
+import {Actions, Router, Scene, Tabs, Lightbox} from 'react-native-router-flux';
+import ForYou from './screens/ForYou';
+import Main from './screens/Main';
+import Player from './screens/Player';
+import MiniPlayer from './screens/MiniPlayer';
 
-const App = () => {
-  return (
-    <View style={styles.container}>
-      <Text>boostcourse-ace</Text>
-    </View>
-  );
-};
+export default class App extends Component {
+  render() {
+    return (
+      <Router hideNavBar="true">
+        <Lightbox>
+          <Tabs>
+            <Scene title="보관함" key="main" component={Main} initial={true} />
+            <Scene
+              title="For You"
+              key="foryou"
+              component={ForYou}
+              initial={false}
+            />
+          </Tabs>
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+          {/* <Scene
+            key="player"
+            component={Player}
+            title="PageTwo"
+            onEnter={Actions.modalView}
+          /> */}
+          <Scene key="popPlayer" component={Player} />
+          <Scene key="MinimizePlayer" component={MiniPlayer} />
 
-export default App;
+        </Lightbox>
+      </Router>
+    );
+  }
+}

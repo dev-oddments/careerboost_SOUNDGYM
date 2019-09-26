@@ -8,18 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* musicPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* musicPlayerTests.m */; };
+		069EF289D7A04C2A99008B2A /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD2107381B2A45ECBC922E71 /* Octicons.ttf */; };
+		0AA61EDC233B1D8C00EECD25 /* dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA61EDB233B1D8C00EECD25 /* dummy.swift */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		233D43F468F542A9BC04A46B /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3ACDD95C5BB54489AB8017D5 /* FontAwesome5_Regular.ttf */; };
+		2B10FB3E56C34F1285664ED9 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68A0BCCA2396419EB2FC3D3E /* FontAwesome5_Brands.ttf */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* musicPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* musicPlayerTests.m */; };
+		300BCCA4E0E94B88AE255D1E /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3E387A7D33A4B6D87BE8633 /* AntDesign.ttf */; };
+		3095375F576446318201C5A0 /* rubicon-icon-font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 805A3A8CAC6E4FBE9FE974B9 /* rubicon-icon-font.ttf */; };
+		314DB0633D9B41D88F0883FE /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78EA62ABBAA645B1850FFE56 /* SimpleLineIcons.ttf */; };
+		329DB21FDFDD484B808954A3 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C37848905E9D40139470D152 /* Foundation.ttf */; };
+		3DB08F8428B34FE69478DE48 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A504BB7E71C45D99977E65C /* EvilIcons.ttf */; };
+		3F4A6AEA065F46BFAC181276 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 147ECFFD3F68488783F0E435 /* Feather.ttf */; };
+		5CAC54CF79FE4D738DC033A1 /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D9CB2EF8BEE4BDF806CC6BB /* Roboto.ttf */; };
+		7462660F7174434BBCA52B8C /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4C4838D2C004EF8A4F01BED /* MaterialCommunityIcons.ttf */; };
+		746FE18D27084FB4B0014AD8 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8E41ED439D14259915E9E5F /* Entypo.ttf */; };
+		A2998F989E014E9793B62CC8 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD8EB05844C5445992AD34EE /* MaterialIcons.ttf */; };
 		ADA4E1E44F3F6666AFAB46C9 /* libPods-musicPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 099A5E2F14AEC39C30FB2B26 /* libPods-musicPlayer.a */; };
+		AF86181300E440A488143910 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04276BA32A864E2DBD8AB92B /* Zocial.ttf */; };
+		C921F0E30BCD4323B3558638 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0F1E0116BFD4A98AF592A8D /* FontAwesome.ttf */; };
 		CBD0635B7FA22FC5F608F5A4 /* libPods-musicPlayer-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9569BA8912102E165B9F1836 /* libPods-musicPlayer-tvOSTests.a */; };
+		D2CC77CABFAB46EA9F632F8F /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0866A8680AAB49C0B1A0849D /* Fontisto.ttf */; };
 		D970B983F7C4EA0F0F4B238E /* libPods-musicPlayer-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 643212F850E38E84EEA3B48A /* libPods-musicPlayer-tvOS.a */; };
 		F3802DF0D744B02EE54BC74B /* libPods-musicPlayerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C31C9D13BAC63422F6227818 /* libPods-musicPlayerTests.a */; };
+		F9035179C2BB410295510458 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9172EDAB744947808384D2F4 /* FontAwesome5_Solid.ttf */; };
+		F906ED00555A41D79C95D615 /* Roboto_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A16428959CB740EE94AC07AB /* Roboto_medium.ttf */; };
+		FADB53EE0B2544199C8C10FB /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3DA8A6CD9D044A384F2D52F /* Ionicons.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +64,11 @@
 		00E356EE1AD99517003FC87E /* musicPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = musicPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* musicPlayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = musicPlayerTests.m; sourceTree = "<group>"; };
+		04276BA32A864E2DBD8AB92B /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/native-base/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
+		0866A8680AAB49C0B1A0849D /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/native-base/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
 		099A5E2F14AEC39C30FB2B26 /* libPods-musicPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-musicPlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AA61EDB233B1D8C00EECD25 /* dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy.swift; sourceTree = "<group>"; };
+		0AF9F2F3233B15920038F128 /* musicPlayer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "musicPlayer-Bridging-Header.h"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* musicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = musicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = musicPlayer/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = musicPlayer/AppDelegate.m; sourceTree = "<group>"; };
@@ -52,21 +76,38 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = musicPlayer/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = musicPlayer/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = musicPlayer/main.m; sourceTree = "<group>"; };
+		147ECFFD3F68488783F0E435 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/native-base/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		2A31EACB066A62615E563918 /* Pods-musicPlayer-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-musicPlayer-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-musicPlayer-tvOSTests/Pods-musicPlayer-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2AF6C348F37860FF1D61FF36 /* Pods-musicPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-musicPlayer.release.xcconfig"; path = "Target Support Files/Pods-musicPlayer/Pods-musicPlayer.release.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* musicPlayer-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "musicPlayer-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* musicPlayer-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "musicPlayer-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D913C37F6BF788614849A1D /* Pods-musicPlayerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-musicPlayerTests.release.xcconfig"; path = "Target Support Files/Pods-musicPlayerTests/Pods-musicPlayerTests.release.xcconfig"; sourceTree = "<group>"; };
+		2D9CB2EF8BEE4BDF806CC6BB /* Roboto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto.ttf; path = "../node_modules/native-base/Fonts/Roboto.ttf"; sourceTree = "<group>"; };
+		3A504BB7E71C45D99977E65C /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/native-base/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
+		3ACDD95C5BB54489AB8017D5 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 		410BF01AF64DEC1924BB0060 /* Pods-musicPlayer-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-musicPlayer-tvOS.release.xcconfig"; path = "Target Support Files/Pods-musicPlayer-tvOS/Pods-musicPlayer-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		58189F6832E72DFFC07602F9 /* Pods-musicPlayer-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-musicPlayer-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-musicPlayer-tvOSTests/Pods-musicPlayer-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		643212F850E38E84EEA3B48A /* libPods-musicPlayer-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-musicPlayer-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		68A0BCCA2396419EB2FC3D3E /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
 		75B494F896D7D18A5EBA1AC8 /* Pods-musicPlayer-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-musicPlayer-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-musicPlayer-tvOS/Pods-musicPlayer-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		78EA62ABBAA645B1850FFE56 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/native-base/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		7E7E100E2FD2B75A2D7157E4 /* Pods-musicPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-musicPlayer.debug.xcconfig"; path = "Target Support Files/Pods-musicPlayer/Pods-musicPlayer.debug.xcconfig"; sourceTree = "<group>"; };
+		805A3A8CAC6E4FBE9FE974B9 /* rubicon-icon-font.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "rubicon-icon-font.ttf"; path = "../node_modules/native-base/Fonts/rubicon-icon-font.ttf"; sourceTree = "<group>"; };
 		8DF5BA134744AB9A45C1478F /* Pods-musicPlayerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-musicPlayerTests.debug.xcconfig"; path = "Target Support Files/Pods-musicPlayerTests/Pods-musicPlayerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9172EDAB744947808384D2F4 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
 		9569BA8912102E165B9F1836 /* libPods-musicPlayer-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-musicPlayer-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A16428959CB740EE94AC07AB /* Roboto_medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto_medium.ttf; path = "../node_modules/native-base/Fonts/Roboto_medium.ttf"; sourceTree = "<group>"; };
+		A3DA8A6CD9D044A384F2D52F /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/native-base/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+		A8E41ED439D14259915E9E5F /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/native-base/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
+		B0F1E0116BFD4A98AF592A8D /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/native-base/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		C31C9D13BAC63422F6227818 /* libPods-musicPlayerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-musicPlayerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C37848905E9D40139470D152 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/native-base/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
+		CD8EB05844C5445992AD34EE /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		D4C4838D2C004EF8A4F01BED /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		F3E387A7D33A4B6D87BE8633 /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/native-base/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
+		FD2107381B2A45ECBC922E71 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/native-base/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,12 +200,15 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				0AA61EDB233B1D8C00EECD25 /* dummy.swift */,
 				13B07FAE1A68108700A75B9A /* musicPlayer */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* musicPlayerTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				D45CF8E6E23D8B9720F8A0CE /* Pods */,
+				E221979A53234F83BB2E6876 /* Resources */,
+				0AF9F2F3233B15920038F128 /* musicPlayer-Bridging-Header.h */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -194,8 +238,33 @@
 				8DF5BA134744AB9A45C1478F /* Pods-musicPlayerTests.debug.xcconfig */,
 				2D913C37F6BF788614849A1D /* Pods-musicPlayerTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E221979A53234F83BB2E6876 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F3E387A7D33A4B6D87BE8633 /* AntDesign.ttf */,
+				A8E41ED439D14259915E9E5F /* Entypo.ttf */,
+				3A504BB7E71C45D99977E65C /* EvilIcons.ttf */,
+				147ECFFD3F68488783F0E435 /* Feather.ttf */,
+				B0F1E0116BFD4A98AF592A8D /* FontAwesome.ttf */,
+				68A0BCCA2396419EB2FC3D3E /* FontAwesome5_Brands.ttf */,
+				3ACDD95C5BB54489AB8017D5 /* FontAwesome5_Regular.ttf */,
+				9172EDAB744947808384D2F4 /* FontAwesome5_Solid.ttf */,
+				0866A8680AAB49C0B1A0849D /* Fontisto.ttf */,
+				C37848905E9D40139470D152 /* Foundation.ttf */,
+				A3DA8A6CD9D044A384F2D52F /* Ionicons.ttf */,
+				D4C4838D2C004EF8A4F01BED /* MaterialCommunityIcons.ttf */,
+				CD8EB05844C5445992AD34EE /* MaterialIcons.ttf */,
+				FD2107381B2A45ECBC922E71 /* Octicons.ttf */,
+				A16428959CB740EE94AC07AB /* Roboto_medium.ttf */,
+				2D9CB2EF8BEE4BDF806CC6BB /* Roboto.ttf */,
+				805A3A8CAC6E4FBE9FE974B9 /* rubicon-icon-font.ttf */,
+				78EA62ABBAA645B1850FFE56 /* SimpleLineIcons.ttf */,
+				04276BA32A864E2DBD8AB92B /* Zocial.ttf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,12 +354,15 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 940;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						LastSwiftMigration = 1030;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -308,6 +380,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -338,6 +411,25 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				300BCCA4E0E94B88AE255D1E /* AntDesign.ttf in Resources */,
+				746FE18D27084FB4B0014AD8 /* Entypo.ttf in Resources */,
+				3DB08F8428B34FE69478DE48 /* EvilIcons.ttf in Resources */,
+				3F4A6AEA065F46BFAC181276 /* Feather.ttf in Resources */,
+				C921F0E30BCD4323B3558638 /* FontAwesome.ttf in Resources */,
+				2B10FB3E56C34F1285664ED9 /* FontAwesome5_Brands.ttf in Resources */,
+				233D43F468F542A9BC04A46B /* FontAwesome5_Regular.ttf in Resources */,
+				F9035179C2BB410295510458 /* FontAwesome5_Solid.ttf in Resources */,
+				D2CC77CABFAB46EA9F632F8F /* Fontisto.ttf in Resources */,
+				329DB21FDFDD484B808954A3 /* Foundation.ttf in Resources */,
+				FADB53EE0B2544199C8C10FB /* Ionicons.ttf in Resources */,
+				7462660F7174434BBCA52B8C /* MaterialCommunityIcons.ttf in Resources */,
+				A2998F989E014E9793B62CC8 /* MaterialIcons.ttf in Resources */,
+				069EF289D7A04C2A99008B2A /* Octicons.ttf in Resources */,
+				F906ED00555A41D79C95D615 /* Roboto_medium.ttf in Resources */,
+				5CAC54CF79FE4D738DC033A1 /* Roboto.ttf in Resources */,
+				3095375F576446318201C5A0 /* rubicon-icon-font.ttf in Resources */,
+				314DB0633D9B41D88F0883FE /* SimpleLineIcons.ttf in Resources */,
+				AF86181300E440A488143910 /* Zocial.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,6 +621,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				0AA61EDC233B1D8C00EECD25 /* dummy.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -582,6 +675,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8DF5BA134744AB9A45C1478F /* Pods-musicPlayerTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -605,6 +699,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2D913C37F6BF788614849A1D /* Pods-musicPlayerTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = musicPlayerTests/Info.plist;
@@ -626,6 +721,7 @@
 			baseConfigurationReference = 7E7E100E2FD2B75A2D7157E4 /* Pods-musicPlayer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				INFOPLIST_FILE = musicPlayer/Info.plist;
@@ -637,6 +733,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = musicPlayer;
+				SWIFT_OBJC_BRIDGING_HEADER = "musicPlayer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -646,6 +745,7 @@
 			baseConfigurationReference = 2AF6C348F37860FF1D61FF36 /* Pods-musicPlayer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = musicPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -656,6 +756,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = musicPlayer;
+				SWIFT_OBJC_BRIDGING_HEADER = "musicPlayer-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
