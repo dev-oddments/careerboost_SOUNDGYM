@@ -42,15 +42,24 @@ export default class App extends Component {
               initial={true}
               icon={musicIcon}
             />
-            <Scene title="Playlist" key="Playlist" component={PlaylistScreen} icon={playlistIcon} />
-            <Scene title="Album" key="Album" component={AlbumScreen} icon={albumIcon}/>
+            <Scene
+              title="Playlist"
+              key="Playlist"
+              component={PlaylistScreen}
+              icon={playlistIcon}
+            />
+            <Scene
+              title="Album"
+              key="Album"
+              component={AlbumScreen}
+              icon={albumIcon}
+            />
             <Scene
               title="ForYou"
               key="foryou"
               component={ForYou}
               initial={false}
               icon={heartIcon}
-
             />
           </Tabs>
           <Scene key="popPlayer" component={Player} />
