@@ -1,6 +1,13 @@
 import React, {Component} from 'react';
 
-import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
+import {
+  View,
+  Button,
+  Text,
+  StyleSheet,
+  Image,
+  TouchableHighlight,
+} from 'react-native';
 
 import {Card, CardItem, Col, Content, Grid} from 'native-base';
 import {Actions} from 'react-native-router-flux';
@@ -28,19 +35,19 @@ export default class AlbumScreen extends Component {
   render() {
     return (
       <Content>
-        <View style={{width: '100%', padding: 20, backgroundColor: 'white'}}>
+        <View style={{width: '100%', padding: 20, backgroundColor: 'rgb(254,255,254)'}}>
           <Text style={{fontSize: 30, fontWeight: 'bold'}}>앨범</Text>
-          <View>
-            <TouchableOpacity
-              style={{height: 10, backgroundColor: 'orange'}}
+          <View style={{flexDirection: 'row', justifyContent: 'space-between', paddingTop:20,}}>
+            <TouchableHighlight
+              title="aa"
+              style={{height: 40, width: "48%", backgroundColor:"rgb(247,248,251)", borderRadius:10, justifyContent:"center", alignContent:"center"}}
               onPress={() => Actions.popPlayer({data: of})}>
-              <Text>재생</Text>
-            </TouchableOpacity>{' '}
-            <TouchableOpacity
-              style={{height: 10, backgroundColor: 'orange'}}
-              onPress={() => Actions.popPlayer({data: of})}>
-              <Text>임의재생</Text>
-            </TouchableOpacity>
+                  <Text>재생</Text>
+              </TouchableHighlight>
+            <Button
+              title="bb"
+              style={{height: 50, color: 'orange'}}
+              onPress={() => Actions.popPlayer({data: of})}></Button>
           </View>
         </View>
 
