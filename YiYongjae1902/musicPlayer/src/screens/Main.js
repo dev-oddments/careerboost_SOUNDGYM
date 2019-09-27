@@ -51,15 +51,15 @@ export default class main extends Component {
             style={{borderColor: 'black'}}
             header
             button
-            onPress={() => Actions.popPlayer()}>
+            onPress={() => Actions.Playlist()}>
             <Text style={{color: 'rgb(218,67,84)'}}>플레이리스트</Text>
           </CardItem>
 
-          <CardItem header button onPress={() => Actions.popPlayer()}>
+          <CardItem header button onPress={() => Actions.Album()}>
             <Text style={{color: 'rgb(218,67,84)'}}>앨범</Text>
           </CardItem>
-          <CardItem header button onPress={() => Actions.popPlayer()}>
-            <Text style={{color: 'rgb(218,67,84)'}}>노래</Text>
+          <CardItem header button onPress={() => Actions.ForYou()}>
+            <Text style={{color: 'rgb(218,67,84)'}}>ForYou</Text>
           </CardItem>
         </Card>
 
