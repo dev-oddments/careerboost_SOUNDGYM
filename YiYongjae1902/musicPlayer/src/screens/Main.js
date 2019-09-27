@@ -51,7 +51,7 @@ export default class main extends Component {
             style={{borderColor: 'black'}}
             header
             button
-            onPress={() => Actions.Playlist()}>
+            onPress={() => Actions.Playlist({data: of})}>
             <Text style={{color: 'rgb(218,67,84)'}}>플레이리스트</Text>
           </CardItem>
 

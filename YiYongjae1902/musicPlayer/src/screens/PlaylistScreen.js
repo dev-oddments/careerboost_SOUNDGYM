@@ -21,13 +21,6 @@ export default class PlaylistScreen extends Component {
                 </CardItem>
               </Card>
             </Col>
-            <Col style={{backgroundColor: 'rgb(233,233,238)', height: 200}}>
-              <Card>
-                <CardItem header button onPress={() => Actions.popPlayer()}>
-                  <Text style={{color: 'rgb(218,67,84)'}}>노래</Text>
-                </CardItem>
-              </Card>
-            </Col>
           </Grid>
         </Content>
       </View>

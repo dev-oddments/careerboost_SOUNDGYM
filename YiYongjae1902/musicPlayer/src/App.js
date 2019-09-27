@@ -22,15 +22,8 @@ export default class App extends Component {
         <Lightbox>
           <Tabs>
             <Scene title="보관함" key="main" component={Main} initial={true} />
-            <Scene
-              title="Playlist"
-              key="Playlist"
-              component={PlaylistScreen}
-            />
-            <Scene 
-                          title="Album"
-
-            key="Album" component={AlbumScreen} />
+            <Scene title="Playlist" key="Playlist" component={PlaylistScreen} />
+            <Scene title="Album" key="Album" component={AlbumScreen} />
             <Scene
               title="ForYou"
               key="foryou"
