@@ -1,34 +1,17 @@
 import React, {Component} from 'react';
 
 import {
-  Alert,
   View,
   Text,
-  FlatList,
   Image,
   StyleSheet,
   TouchableOpacity,
   TouchableHighlight,
 } from 'react-native';
 
-import {
-  Container,
-  Content,
-  Card,
-  Header,
-  Body,
-  Title,
-  Left,
-  Thumbnail,
-  CardItem,
-  ListItem,
-  Button,
-  Grid,
-  Icon,
-  Right,
-  Col,
-} from 'native-base';
+import {Content} from 'native-base';
 import {Actions} from 'react-native-router-flux';
+import Icon from 'react-native-ionicons';
 
 export default class ListScreen extends Component {
   _renderList() {
@@ -63,7 +46,7 @@ export default class ListScreen extends Component {
               justifyContent: 'center',
             }}>
             <View style={{flex: 1, paddingTop: 5}}>
-              <Text style={{fontSize: 17, fontWeight: 600}}>{of.title}</Text>
+              <Text style={{fontSize: 17, fontWeight: 'bold'}}>{of.title}</Text>
               <Text style={{fontSize: 13, color: 'rgb(145,145,150)'}}>
                 {of.artist}
               </Text>
@@ -100,7 +83,7 @@ export default class ListScreen extends Component {
                 justifyContent: 'center',
               }}>
               <View style={{flex: 1, paddingTop: 5}}>
-                <Text style={{fontSize: 20, fontWeight: 600}}>
+                <Text style={{fontSize: 20, fontWeight: 'bold'}}>
                   {this.props.title}
                 </Text>
                 <Text style={{fontSize: 15, color: 'rgb(145,145,150)'}}>
@@ -163,7 +146,7 @@ export default class ListScreen extends Component {
                   style={{
                     fontSize: 17,
                     color: 'rgb(234,69,90)',
-                    fontWeight: 600,
+                    fontWeight: 'bold',
                   }}>
                   {' '}
                   재생
@@ -196,7 +179,7 @@ export default class ListScreen extends Component {
                   style={{
                     fontSize: 17,
                     color: 'rgb(234,69,90)',
-                    fontWeight: 600,
+                    fontWeight: 'bold',
                   }}>
                   {' '}
                   임의 재생
@@ -241,66 +224,5 @@ const styles = StyleSheet.create({
     flex: 1,
     resizeMode: 'contain',
     width: '100%',
-  },
-  text: {
-    marginLeft: 5,
-  },
-  baseContainer: {
-    flex: 1,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 9,
-    },
-    shadowOpacity: 0.5,
-    shadowRadius: 12.35,
-    borderTopLeftRadius: 30,
-    borderTopRightRadius: 30,
-    backgroundColor: 'white',
-  },
-  cellContainer: {
-    flexDirection: 'column',
-    justifyContent: 'space-around',
-    height: 30,
-    width: 20,
-  },
-  image: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    margin: 15,
-    height: 300,
-  },
-  controller: {
-    alignItems: 'center',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginLeft: 65,
-    marginRight: 65,
-  },
-  info: {
-    alignItems: 'center',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    marginLeft: 40,
-    marginRight: 40,
-    marginTop: 10,
-  },
-  volume: {
-    alignItems: 'center',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginLeft: 40,
-    marginRight: 40,
-    marginTop: 30,
-
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-
-    elevation: 5,
   },
 });

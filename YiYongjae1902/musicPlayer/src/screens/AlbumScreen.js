@@ -1,26 +1,16 @@
 import React, {Component} from 'react';
 
-import {
-  View,
-  Button,
-  Text,
-  StyleSheet,
-  Image,
-  TouchableHighlight,
-} from 'react-native';
-
-import {Card, CardItem, Col, Content, Grid} from 'native-base';
+import {View, Text, StyleSheet, Image, TouchableHighlight} from 'react-native';
+import {Content} from 'native-base';
 import {Actions} from 'react-native-router-flux';
 import musicList from '../assets/musicList.json';
 import Icon from 'react-native-ionicons';
 
 export default class AlbumScreen extends Component {
-  componentDidMount() {}
-
   _renderList() {
     let listComplete = musicList.map((of, rowKey) => {
       return (
-        <View style={styles.child}>
+        <View key={rowKey} style={styles.child}>
           <Image style={styles.childImage} source={{uri: of.artwork}} />
           <View style={styles.text}>
             <Text style={{fontSize: 18, fontWeight: 'bold'}}>{of.title}</Text>
@@ -62,7 +52,14 @@ export default class AlbumScreen extends Component {
                 justifyContent: 'center',
                 alignItems: 'center',
               }}
-              onPress={() => Actions.popPlayer({data: of})}>
+              onPress={() =>
+                Actions.push('popPlayer', {
+                  data: musicList,
+                  title: musicList[0].title,
+                  artist: musicList[0].artist,
+                  artwork: musicList[0].artwork,
+                })
+              }>
               <View
                 style={{
                   flex: 1,
@@ -70,8 +67,19 @@ export default class AlbumScreen extends Component {
                   justifyContent: 'center',
                   alignItems: 'center',
                 }}>
-                <Icon style={{fontSize: 19, color:'rgb(234,69,90)'}} name="play" />
-                <Text style={{fontSize: 17, color:'rgb(234,69,90)', fontWeight:600}}>  재생</Text>
+                <Icon
+                  style={{fontSize: 19, color: 'rgb(234,69,90)'}}
+                  name="play"
+                />
+                <Text
+                  style={{
+                    fontSize: 17,
+                    color: 'rgb(234,69,90)',
+                    fontWeight: 'bold',
+                  }}>
+                  {' '}
+                  재생
+                </Text>
               </View>
             </TouchableHighlight>
             <TouchableHighlight
@@ -84,7 +92,14 @@ export default class AlbumScreen extends Component {
                 justifyContent: 'center',
                 alignItems: 'center',
               }}
-              onPress={() => Actions.popPlayer({data: of})}>
+              onPress={() =>
+                Actions.push('popPlayer', {
+                  data: musicList,
+                  title: musicList[0].title,
+                  artist: musicList[0].artist,
+                  artwork: musicList[0].artwork,
+                })
+              }>
               <View
                 style={{
                   flex: 1,
@@ -92,8 +107,19 @@ export default class AlbumScreen extends Component {
                   justifyContent: 'center',
                   alignItems: 'center',
                 }}>
-                <Icon style={{fontSize: 26, color:'rgb(234,69,90)'}} name="shuffle" />
-                <Text style={{fontSize: 17, color:'rgb(234,69,90)', fontWeight:600}}>  임의 재생</Text>
+                <Icon
+                  style={{fontSize: 26, color: 'rgb(234,69,90)'}}
+                  name="shuffle"
+                />
+                <Text
+                  style={{
+                    fontSize: 17,
+                    color: 'rgb(234,69,90)',
+                    fontWeight: 'bold',
+                  }}>
+                  {' '}
+                  임의 재생
+                </Text>
               </View>
             </TouchableHighlight>
           </View>
@@ -136,71 +162,11 @@ const styles = StyleSheet.create({
   },
   childImage: {
     borderRadius: 5,
-
-    // margin: '1%',
     flex: 1,
     resizeMode: 'contain',
     width: '100%',
   },
   text: {
     marginLeft: 5,
-  },
-  baseContainer: {
-    flex: 1,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 9,
-    },
-    shadowOpacity: 0.5,
-    shadowRadius: 12.35,
-    borderTopLeftRadius: 30,
-    borderTopRightRadius: 30,
-    backgroundColor: 'white',
-  },
-  cellContainer: {
-    flexDirection: 'column',
-    justifyContent: 'space-around',
-    height: 30,
-    width: 20,
-  },
-  image: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    margin: 15,
-    height: 300,
-  },
-  controller: {
-    alignItems: 'center',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginLeft: 65,
-    marginRight: 65,
-  },
-  info: {
-    alignItems: 'center',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    marginLeft: 40,
-    marginRight: 40,
-    marginTop: 10,
-  },
-  volume: {
-    alignItems: 'center',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginLeft: 40,
-    marginRight: 40,
-    marginTop: 30,
-
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-
-    elevation: 5,
   },
 });

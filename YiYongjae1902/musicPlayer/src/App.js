@@ -8,7 +8,6 @@
 
 import React, {Component} from 'react';
 import {
-  Actions,
   Router,
   Scene,
   Tabs,
@@ -44,7 +43,7 @@ export default class App extends Component {
       <Router hideNavBar="true">
         <Modal hideNavBar="ture">
           <Lightbox>
-            <Tabs activeTintColor={'rgb(216,82,94)' }>
+            <Tabs activeTintColor={'rgb(216,82,94)'}>
               <Scene
                 title="보관함"
                 key="main"

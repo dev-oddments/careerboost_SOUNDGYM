@@ -1,12 +1,15 @@
 import React from 'react';
-import {Image, View, StyleSheet, TouchableOpacity, Slider, Dimensions} from 'react-native';
+import {
+  Image,
+  View,
+  StyleSheet,
+  TouchableOpacity,
+  Dimensions,
+} from 'react-native';
 import Icon from 'react-native-ionicons';
-import {Text, Button} from 'native-base';
+import {Text} from 'native-base';
 import {Actions} from 'react-native-router-flux';
 import TrackPlayer from 'react-native-track-player';
-
-import ImageResize from '../components/ImageResize';
-import ProgressNow from '../components/ProgressNow';
 
 const {height: deviceHeight, width: deviceWidth} = Dimensions.get('window');
 
@@ -15,10 +18,9 @@ export default class player extends TrackPlayer.ProgressComponent {
     isPlay: '',
   };
   componentDidMount() {
-      console.log(this.props.isPlay)
-      this.setState({isPlay: this.props.isPlay})
+    this.setState({isPlay: this.props.isPlay});
   }
-  
+
   _togglePlay() {
     if (this.state.isPlay === 'play') {
       TrackPlayer.play();
@@ -41,34 +43,31 @@ export default class player extends TrackPlayer.ProgressComponent {
 
   render() {
     return (
-      <View style={{backgroundColor:"white"}}>
-      <View style={styles.baseContainer}>
-        <View style={styles.closeButton}>
-          <TouchableOpacity
-            onPress={() => {
-              Actions.main();
-            }}>
-            <Icon name="arrow-down" style={{fontSize: 45, color: 'gray'}} />
-          </TouchableOpacity>
-        </View>
-        <View style={styles.controller}>
-          <Image
-            source={{uri: this.props.data.artwork}}
-            style={{width:70, height:70}}
-          />
-          <Text style={{fontSize: 20}}>
-            {this.props.data.title}
-          </Text>
-          <TouchableOpacity onPress={() => this._togglePlay()}>
-            <Icon name={this.state.isPlay} style={{fontSize: 35}} />
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => TrackPlayer.skipToNext()}>
-            <Icon name="fastforward" style={{fontSize: 35}} />
-          </TouchableOpacity>
+      <View style={{backgroundColor: 'white'}}>
+        <View style={styles.baseContainer}>
+          <View style={styles.closeButton}>
+            <TouchableOpacity
+              onPress={() => {
+                Actions.main();
+              }}>
+              <Icon name="arrow-down" style={{fontSize: 45, color: 'gray'}} />
+            </TouchableOpacity>
+          </View>
+          <View style={styles.controller}>
+            <Image
+              source={{uri: this.props.data.artwork}}
+              style={{width: 70, height: 70}}
+            />
+            <Text style={{fontSize: 20}}>{this.props.data.title}</Text>
+            <TouchableOpacity onPress={() => this._togglePlay()}>
+              <Icon name={this.state.isPlay} style={{fontSize: 35}} />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => TrackPlayer.skipToNext()}>
+              <Icon name="fastforward" style={{fontSize: 35}} />
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
-      </View>
-
     );
   }
 }

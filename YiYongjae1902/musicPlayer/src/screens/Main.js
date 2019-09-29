@@ -1,24 +1,8 @@
 import React, {Component} from 'react';
 
-import {Alert, View, Text, FlatList, Image} from 'react-native';
+import {Text} from 'react-native';
 
-import {
-  Container,
-  Content,
-  Card,
-  Header,
-  Body,
-  Title,
-  Left,
-  Thumbnail,
-  CardItem,
-  ListItem,
-  Button,
-  Grid,
-  Icon,
-  Right,
-  Col,
-} from 'native-base';
+import {Content, Card, Body, Left, Thumbnail, CardItem} from 'native-base';
 import {Actions} from 'react-native-router-flux';
 import musicList from '../assets/musicList.json';
 
@@ -62,7 +46,6 @@ export default class main extends Component {
             onPress={() => Actions.PlaylistStack()}>
             <Text style={{color: 'rgb(218,67,84)'}}>플레이리스트</Text>
           </CardItem>
-
           <CardItem header button onPress={() => Actions.Album()}>
             <Text style={{color: 'rgb(218,67,84)'}}>앨범</Text>
           </CardItem>
@@ -70,7 +53,6 @@ export default class main extends Component {
             <Text style={{color: 'rgb(218,67,84)'}}>ForYou</Text>
           </CardItem>
         </Card>
-
         <Card>{this._renderList()}</Card>
       </Content>
     );

@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  Image,
   View,
   StyleSheet,
   TouchableOpacity,
@@ -9,7 +8,7 @@ import {
   Animated,
 } from 'react-native';
 import Icon from 'react-native-ionicons';
-import {Text, Button} from 'native-base';
+import {Text} from 'native-base';
 import {Actions} from 'react-native-router-flux';
 import TrackPlayer from 'react-native-track-player';
 
@@ -23,22 +22,9 @@ export default class player extends TrackPlayer.ProgressComponent {
     Volume: 60,
     isPlay: 'pause',
     offset: new Animated.Value(deviceHeight),
-
-    artist: '',
-    title: '',
-    artwork: '',
   };
 
   componentDidMount() {
-    console.log(this.props.title);
-    console.log(this.props.artist);
-
-      // console.log(this.props.data.title);
-    
-    // this.setState({
-    //   artist: hello.artist,
-    //   title:
-    // })
     Animated.timing(this.state.offset, {
       duration: 100,
       toValue: 0,
@@ -48,9 +34,6 @@ export default class player extends TrackPlayer.ProgressComponent {
       TrackPlayer.reset();
       TrackPlayer.add(this.props.data);
       TrackPlayer.play();
-      // console.log(TrackPlayer.getCurrentTrack(id))
-      // const track = await TrackPlayer.getTrack();
-      // this.setState({artist: track.title});
     });
   }
 
@@ -58,7 +41,13 @@ export default class player extends TrackPlayer.ProgressComponent {
     Animated.timing(this.state.offset, {
       duration: 150,
       toValue: deviceHeight,
-    }).start(Actions.push('MinimizePlayer', {data: this.props.data, artwork: this.props.artwork, isPlay: this.state.isPlay}));
+    }).start(
+      Actions.push('MinimizePlayer', {
+        data: this.props.data,
+        artwork: this.props.artwork,
+        isPlay: this.state.isPlay,
+      }),
+    );
   }
 
   _togglePlay() {
@@ -71,19 +60,25 @@ export default class player extends TrackPlayer.ProgressComponent {
       this.setState({isPlay: 'play'});
     }
   }
+
   _getRewind() {
-    // Add condition about before music exist
     TrackPlayer.seekTo(0);
     TrackPlayer.pause();
 
     this.setState({isPlay: 'play'});
   }
 
-  _getFastForward() {}
+  _getFastForward() {
+    // 조건 검사 및 로직 추가 필요
+  }
 
   render() {
     return (
-      <Animated.View style={{transform: [{translateY: this.state.offset}], backgroundColor:'rgb(254,255,254)'}}>
+      <Animated.View
+        style={{
+          transform: [{translateY: this.state.offset}],
+          backgroundColor: 'rgb(254,255,254)',
+        }}>
         <View style={styles.baseContainer}>
           <View style={styles.closeButton}>
             <TouchableOpacity
@@ -96,7 +91,7 @@ export default class player extends TrackPlayer.ProgressComponent {
           <View style={styles.image}>
             <ImageResize img={this.props.artwork} isPlay={this.state.isPlay} />
           </View>
-          <ProgressNow isPlay={this.state.isPlay}/>
+          <ProgressNow isPlay={this.state.isPlay} />
           <View style={styles.info}>
             <Text style={{fontSize: 25, fontWeight: 'bold'}}>
               {this.props.title}

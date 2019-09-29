@@ -1,14 +1,5 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  Image,
-  Slider,
-  AppRegistry,
-  StatusBar,
-  StyleSheet,
-} from 'react-native';
+import {View, Text, Slider, StyleSheet} from 'react-native';
 import TrackPlayer, {
   ProgressComponent,
   useTrackPlayerProgress,
@@ -18,12 +9,14 @@ export default class ProgressNow extends TrackPlayer.ProgressComponent {
   state = {
     isSeeking: false,
   };
+
   _progressToTime = progress => {
     TrackPlayer.getDuration().then(duration => {
       const time = (duration / 100) * progress * 100;
       TrackPlayer.seekTo(time);
     });
   };
+
   _currentTime = () => {
     const minute = parseInt(this.state.position / 60)
       .toString()
