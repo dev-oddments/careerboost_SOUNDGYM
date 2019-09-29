@@ -20,18 +20,27 @@ import {
   Col,
 } from 'native-base';
 import {Actions} from 'react-native-router-flux';
+import musicList from '../assets/musicList.json';
 
 export default class main extends Component {
   _renderList() {
-    let listComplete = data.map((of, rowKey) => {
+    let listComplete = musicList.map((of, rowKey) => {
+      console.log(of.title);
       return (
         <CardItem
           key={rowKey}
           header
           button
-          onPress={() => Actions.popPlayer({data: of})}>
+          onPress={() =>
+            Actions.push('popPlayer', {
+              data: of,
+              title: of.title,
+              artist: of.artist,
+              artwork: of.artwork,
+            })
+          }>
           <Left>
-            <Thumbnail square source={of.artwork} />
+            <Thumbnail square source={{uri: of.artwork}} />
             <Body>
               <Text>{of.title}</Text>
               <Text note>{of.artist}</Text>
@@ -51,7 +60,7 @@ export default class main extends Component {
             style={{borderColor: 'black'}}
             header
             button
-            onPress={() => Actions.Playlist({data: it})}>
+            onPress={() => Actions.PlaylistStack()}>
             <Text style={{color: 'rgb(218,67,84)'}}>플레이리스트</Text>
           </CardItem>
 
@@ -68,56 +77,3 @@ export default class main extends Component {
     );
   }
 }
-
-const data = [
-  {
-    id: '0',
-    url: require('../assets/last.mp3'),
-    title: 'LAST (Feat. FR:EDEN',
-    artist: 'Alisha',
-    artwork: require('../assets/last.jpg'),
-  },
-  {
-    id: '1',
-    url: require('../assets/auaro.mp3'),
-    title: 'Aura',
-    artist: 'IOAH',
-    artwork: require('../assets/auaro.jpg'),
-  },
-  {
-    id: '2',
-    url: require('../assets/brazil.mp3'),
-    title: 'brazil',
-    artist: 'mt.tkovr.',
-    artwork: require('../assets/brazil.jpg'),
-  },
-  {
-    id: '3',
-    url: require('../assets/channel-57-vol-1.mp3'),
-    title: 'channel-57-vol-1',
-    artist: 'Coa white',
-    artwork: require('../assets/channel-57-vol-1.jpg'),
-  },
-  {
-    id: '4',
-    url: require('../assets/contra.mp3'),
-    title: 'contra',
-    artist: 'H A Y A K E',
-    artwork: require('../assets/contra.jpg'),
-  },
-  {
-    id: '5',
-    url: require('../assets/engine.mp3'),
-    title: 'engine',
-    artist: 'xxmaddox',
-    artwork: require('../assets/engine.jpg'),
-  },
-
-  {
-    id: '6',
-    url: require('../assets/Jetlag.mp3'),
-    title: 'Jetlag',
-    artist: 'GGMRecords',
-    artwork: require('../assets/Jetlag.jpg'),
-  },
-];

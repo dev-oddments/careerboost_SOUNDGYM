@@ -23,9 +23,22 @@ export default class player extends TrackPlayer.ProgressComponent {
     Volume: 60,
     isPlay: 'pause',
     offset: new Animated.Value(deviceHeight),
+
+    artist: '',
+    title: '',
+    artwork: '',
   };
 
   componentDidMount() {
+    console.log(this.props.title);
+    console.log(this.props.artist);
+
+      // console.log(this.props.data.title);
+    
+    // this.setState({
+    //   artist: hello.artist,
+    //   title:
+    // })
     Animated.timing(this.state.offset, {
       duration: 100,
       toValue: 0,
@@ -35,6 +48,9 @@ export default class player extends TrackPlayer.ProgressComponent {
       TrackPlayer.reset();
       TrackPlayer.add(this.props.data);
       TrackPlayer.play();
+      // console.log(TrackPlayer.getCurrentTrack(id))
+      // const track = await TrackPlayer.getTrack();
+      // this.setState({artist: track.title});
     });
   }
 
@@ -67,7 +83,7 @@ export default class player extends TrackPlayer.ProgressComponent {
 
   render() {
     return (
-      <Animated.View style={{transform: [{translateY: this.state.offset}]}}>
+      <Animated.View style={{transform: [{translateY: this.state.offset}], backgroundColor:'rgb(254,255,254)'}}>
         <View style={styles.baseContainer}>
           <View style={styles.closeButton}>
             <TouchableOpacity
@@ -78,18 +94,15 @@ export default class player extends TrackPlayer.ProgressComponent {
             </TouchableOpacity>
           </View>
           <View style={styles.image}>
-            <ImageResize
-              img={this.props.data.artwork}
-              isPlay={this.state.isPlay}
-            />
+            <ImageResize img={this.props.artwork} isPlay={this.state.isPlay} />
           </View>
-          <ProgressNow />
+          <ProgressNow isPlay={this.state.isPlay}/>
           <View style={styles.info}>
             <Text style={{fontSize: 25, fontWeight: 'bold'}}>
-              {this.props.data.title}
+              {this.props.title}
             </Text>
             <Text style={{fontSize: 20, color: 'rgb(218,67,84)'}}>
-              {this.props.data.artist}
+              {this.props.artist}
             </Text>
           </View>
           <View style={styles.controller}>
@@ -194,55 +207,3 @@ const styles = StyleSheet.create({
 });
 
 TrackPlayer.registerEventHandler(require('../service.js'));
-const data = [
-  {
-    id: '0',
-    url: require('../assets/last.mp3'),
-    title: 'LAST (Feat. FR:EDEN',
-    artist: 'Alisha',
-    artwork: require('../assets/last.jpg'),
-  },
-  {
-    id: '1',
-    url: require('../assets/auaro.mp3'),
-    title: 'Aura',
-    artist: 'IOAH',
-    artwork: require('../assets/auaro.jpg'),
-  },
-  {
-    id: '2',
-    url: require('../assets/brazil.mp3'),
-    title: 'brazil',
-    artist: 'mt.tkovr.',
-    artwork: require('../assets/brazil.jpg'),
-  },
-  {
-    id: '3',
-    url: require('../assets/channel-57-vol-1.mp3'),
-    title: 'channel-57-vol-1',
-    artist: 'Coa white',
-    artwork: require('../assets/channel-57-vol-1.jpg'),
-  },
-  {
-    id: '4',
-    url: require('../assets/contra.mp3'),
-    title: 'contra',
-    artist: 'H A Y A K E',
-    artwork: require('../assets/contra.jpg'),
-  },
-  {
-    id: '5',
-    url: require('../assets/engine.mp3'),
-    title: 'engine',
-    artist: 'xxmaddox',
-    artwork: require('../assets/engine.jpg'),
-  },
-
-  {
-    id: '6',
-    url: require('../assets/Jetlag.mp3'),
-    title: 'Jetlag',
-    artist: 'GGMRecords',
-    artwork: require('../assets/Jetlag.jpg'),
-  },
-];
