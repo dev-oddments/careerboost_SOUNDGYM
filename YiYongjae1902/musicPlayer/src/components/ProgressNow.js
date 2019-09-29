@@ -1,9 +1,10 @@
 import React from 'react';
-import {View, Text, Slider, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 import TrackPlayer, {
   ProgressComponent,
   useTrackPlayerProgress,
 } from 'react-native-track-player';
+import Slider from '@react-native-community/slider';
 
 export default class ProgressNow extends TrackPlayer.ProgressComponent {
   state = {

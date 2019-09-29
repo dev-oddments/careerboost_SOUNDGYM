@@ -3,7 +3,6 @@ import {
   View,
   StyleSheet,
   TouchableOpacity,
-  Slider,
   Dimensions,
   Animated,
 } from 'react-native';
@@ -14,6 +13,7 @@ import TrackPlayer from 'react-native-track-player';
 
 import ImageResize from '../components/ImageResize';
 import ProgressNow from '../components/ProgressNow';
+import Slider from '@react-native-community/slider';
 
 const {height: deviceHeight, width: deviceWidth} = Dimensions.get('window');
 
