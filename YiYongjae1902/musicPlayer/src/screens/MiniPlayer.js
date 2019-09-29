@@ -48,9 +48,9 @@ export default class player extends TrackPlayer.ProgressComponent {
           <View style={styles.closeButton}>
             <TouchableOpacity
               onPress={() => {
-                Actions.main();
+                Actions.pop();
               }}>
-              <Icon name="arrow-down" style={{fontSize: 45, color: 'gray'}} />
+              <Icon name="arrow-up" style={{fontSize: 45, color: 'gray'}} />
             </TouchableOpacity>
           </View>
           <View style={styles.controller}>

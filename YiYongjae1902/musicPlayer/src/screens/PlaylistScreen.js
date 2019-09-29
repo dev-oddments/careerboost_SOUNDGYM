@@ -1,6 +1,13 @@
 import React, {Component} from 'react';
 
-import {View, Text, StyleSheet, TouchableOpacity, Image} from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  Image,
+  FlatList,
+} from 'react-native';
 
 import {Content} from 'native-base';
 import {Actions} from 'react-native-router-flux';
@@ -8,52 +15,42 @@ import playlist from '../assets/playlist.json';
 import Icon from 'react-native-ionicons';
 
 export default class PlaylistScreen extends Component {
-  _renderList() {
-    let listComplete = playlist.map((of, rowKey) => {
-      console.log(of.title);
-      return (
-        <TouchableOpacity
-          style={styles.parent}
-          key={rowKey}
-          header
-          button
-          onPress={() =>
-            Actions.push('ListScreen', {
-              data: of.info,
-              title: of.playlist,
-              artwork: of.artwork,
-            })
-          }>
-          <View style={styles.child}>
-            <Image
-              style={styles.childImage}
-              square
-              source={{uri: of.artwork}}
-            />
-          </View>
-          <View
-            style={{
-              paddingLeft: 20,
-              flex: 1,
-              alignItems: 'flex-start',
-              flexDirection: 'column',
-            }}>
-            <Text style={{fontSize: 17, fontWeight: 'bold'}}>
-              {of.playlist}
-            </Text>
-            <Text
-              style={{fontSize: 15, color: 'rgb(145,145,150)', paddingTop: 5}}>
-              {of.playlist}
-            </Text>
-          </View>
-          <Icon
-            name="arrow-forward"
-            style={{fontSize: 20, color: 'rgb(235,235,239)', paddingRight: 15}}
-          />
-        </TouchableOpacity>
-      );
-    });
-    return listComplete;
+  _renderList(of, rowKey) {
+    return (
+      <TouchableOpacity
+        style={styles.parent}
+        key={rowKey}
+        header
+        button
+        onPress={() =>
+          Actions.push('ListScreen', {
+            data: of.info,
+            title: of.playlist,
+            artwork: of.artwork,
+          })
+        }>
+        <View style={styles.child}>
+          <Image style={styles.childImage} square source={{uri: of.artwork}} />
+        </View>
+        <View
+          style={{
+            paddingLeft: 20,
+            flex: 1,
+            alignItems: 'flex-start',
+            flexDirection: 'column',
+          }}>
+          <Text style={{fontSize: 17, fontWeight: 'bold'}}>{of.playlist}</Text>
+          <Text
+            style={{fontSize: 15, color: 'rgb(145,145,150)', paddingTop: 5}}>
+            {of.playlist}
+          </Text>
+        </View>
+        <Icon
+          name="arrow-forward"
+          style={{fontSize: 20, color: 'rgb(235,235,239)', paddingRight: 15}}
+        />
+      </TouchableOpacity>
+    );
   }
 
   render() {
@@ -69,7 +66,10 @@ export default class PlaylistScreen extends Component {
             }}>
             플레이리스트
           </Text>
-          <View>{this._renderList()}</View>
+          <FlatList
+            data={playlist}
+            renderItem={({item, index}) => this._renderList(item, index)}
+          />
         </View>
       </Content>
     );

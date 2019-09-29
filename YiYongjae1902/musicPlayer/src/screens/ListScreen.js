@@ -7,6 +7,7 @@ import {
   StyleSheet,
   TouchableOpacity,
   TouchableHighlight,
+  FlatList,
 } from 'react-native';
 
 import {Content} from 'native-base';
@@ -14,52 +15,45 @@ import {Actions} from 'react-native-router-flux';
 import Icon from 'react-native-ionicons';
 
 export default class ListScreen extends Component {
-  _renderList() {
-    let listComplete = this.props.data.map((of, rowKey) => {
-      return (
-        <TouchableOpacity
-          style={styles.parent}
-          key={rowKey}
-          header
-          button
-          onPress={() =>
-            Actions.push('popPlayer', {
-              data: this.props.data[rowKey],
-              title: this.props.data[rowKey].title,
-              artist: this.props.data[rowKey].artist,
-              artwork: this.props.data[rowKey].artwork,
-            })
-          }>
-          <View style={styles.child}>
-            <Image
-              style={styles.childImage}
-              square
-              source={{uri: of.artwork}}
-            />
+  _renderList(of, rowKey) {
+    return (
+      <TouchableOpacity
+        style={styles.parent}
+        key={rowKey}
+        header
+        button
+        onPress={() =>
+          Actions.push('popPlayer', {
+            data: this.props.data[rowKey],
+            title: this.props.data[rowKey].title,
+            artist: this.props.data[rowKey].artist,
+            artwork: this.props.data[rowKey].artwork,
+          })
+        }>
+        <View style={styles.child}>
+          <Image style={styles.childImage} square source={{uri: of.artwork}} />
+        </View>
+        <View
+          style={{
+            paddingLeft: 20,
+            flex: 1,
+            alignItems: 'flex-start',
+            flexDirection: 'column',
+            justifyContent: 'center',
+          }}>
+          <View style={{flex: 1, paddingTop: 5}}>
+            <Text style={{fontSize: 17, fontWeight: 'bold'}}>{of.title}</Text>
+            <Text style={{fontSize: 13, color: 'rgb(145,145,150)'}}>
+              {of.artist}
+            </Text>
           </View>
-          <View
-            style={{
-              paddingLeft: 20,
-              flex: 1,
-              alignItems: 'flex-start',
-              flexDirection: 'column',
-              justifyContent: 'center',
-            }}>
-            <View style={{flex: 1, paddingTop: 5}}>
-              <Text style={{fontSize: 17, fontWeight: 'bold'}}>{of.title}</Text>
-              <Text style={{fontSize: 13, color: 'rgb(145,145,150)'}}>
-                {of.artist}
-              </Text>
-            </View>
-          </View>
-          <Icon
-            name="arrow-forward"
-            style={{fontSize: 20, color: 'rgb(235,235,239)', paddingRight: 15}}
-          />
-        </TouchableOpacity>
-      );
-    });
-    return listComplete;
+        </View>
+        <Icon
+          name="arrow-forward"
+          style={{fontSize: 20, color: 'rgb(235,235,239)', paddingRight: 15}}
+        />
+      </TouchableOpacity>
+    );
   }
 
   render() {
@@ -181,7 +175,6 @@ export default class ListScreen extends Component {
                     color: 'rgb(234,69,90)',
                     fontWeight: 'bold',
                   }}>
-                  {' '}
                   임의 재생
                 </Text>
               </View>
@@ -189,7 +182,10 @@ export default class ListScreen extends Component {
           </View>
         </View>
         <View style={styles.container}>
-          <View>{this._renderList()}</View>
+          <FlatList
+            data={this.props.data}
+            renderItem={({item, index}) => this._renderList(item, index)}
+          />
         </View>
       </Content>
     );

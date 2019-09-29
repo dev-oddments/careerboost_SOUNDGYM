@@ -117,7 +117,6 @@ export default class AlbumScreen extends Component {
                     color: 'rgb(234,69,90)',
                     fontWeight: 'bold',
                   }}>
-                  {' '}
                   임의 재생
                 </Text>
               </View>
@@ -126,18 +125,6 @@ export default class AlbumScreen extends Component {
         </View>
 
         <View style={styles.parent}>
-          <View style={styles.child}>
-            <Image
-              style={styles.childImage}
-              source={require('../assets/engine.jpg')}
-            />
-            <View style={styles.text}>
-              <Text style={{fontSize: 18, fontWeight: 'bold'}}>Aura</Text>
-              <Text style={{fontSize: 16, color: 'rgb(154,154,158)'}}>
-                IOAH
-              </Text>
-            </View>
-          </View>
           {this._renderList()}
         </View>
       </Content>
