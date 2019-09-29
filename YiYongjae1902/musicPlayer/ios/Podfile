@@ -29,6 +29,8 @@ target 'musicPlayer' do
 
   pod 'react-native-track-player', :path => '../node_modules/react-native-track-player'
 
+  pod 'react-native-slider', :path => '../node_modules/@react-native-community/slider'
+
   target 'musicPlayerTests' do
     inherit! :search_paths
     # Pods for testing
