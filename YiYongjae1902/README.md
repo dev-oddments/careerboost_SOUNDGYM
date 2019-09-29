@@ -2,7 +2,7 @@
 > React-Native로 크로스 플랫폼 뮤직 플레이어 앱 만들기(iOS/Android 선택)
 
 ## What I did
-
+![gif](musicPlayer/src/assets/musicPlayer.gif)
 ## React Native 학습
 - 환경구성
   - `react-native init calculator`
