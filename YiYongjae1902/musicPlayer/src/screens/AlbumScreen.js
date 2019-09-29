@@ -11,19 +11,21 @@ import {
 
 import {Card, CardItem, Col, Content, Grid} from 'native-base';
 import {Actions} from 'react-native-router-flux';
+import musicList from '../assets/musicList.json';
+import Icon from 'react-native-ionicons';
 
 export default class AlbumScreen extends Component {
   componentDidMount() {}
 
   _renderList() {
-    let listComplete = data.map((of, rowKey) => {
+    let listComplete = musicList.map((of, rowKey) => {
       return (
         <View style={styles.child}>
-          <Image style={styles.childImage} source={of.artwork} />
+          <Image style={styles.childImage} source={{uri: of.artwork}} />
           <View style={styles.text}>
             <Text style={{fontSize: 18, fontWeight: 'bold'}}>{of.title}</Text>
             <Text style={{fontSize: 16, color: 'rgb(154,154,158)'}}>
-              {of.artist}}
+              {of.artist}
             </Text>
           </View>
         </View>
@@ -34,20 +36,66 @@ export default class AlbumScreen extends Component {
 
   render() {
     return (
-      <Content>
-        <View style={{width: '100%', padding: 20, backgroundColor: 'rgb(254,255,254)'}}>
-          <Text style={{fontSize: 30, fontWeight: 'bold'}}>앨범</Text>
-          <View style={{flexDirection: 'row', justifyContent: 'space-between', paddingTop:20,}}>
+      <Content style={{backgroundColor: 'rgb(254,255,254)'}}>
+        <View
+          style={{
+            width: '100%',
+            paddingLeft: 20,
+            paddingTop: 10,
+            paddingRight: 20,
+            backgroundColor: 'rgb(254,255,254)',
+          }}>
+          <Text style={{fontSize: 35, fontWeight: 'bold'}}>앨범</Text>
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              paddingTop: 20,
+            }}>
             <TouchableHighlight
               title="aa"
-              style={{height: 40, width: "48%", backgroundColor:"rgb(247,248,251)", borderRadius:10, justifyContent:"center", alignContent:"center"}}
+              style={{
+                height: 45,
+                width: '48%',
+                backgroundColor: 'rgb(247,248,251)',
+                borderRadius: 10,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
               onPress={() => Actions.popPlayer({data: of})}>
-                  <Text>재생</Text>
-              </TouchableHighlight>
-            <Button
-              title="bb"
-              style={{height: 50, color: 'orange'}}
-              onPress={() => Actions.popPlayer({data: of})}></Button>
+              <View
+                style={{
+                  flex: 1,
+                  flexDirection: 'row',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <Icon style={{fontSize: 19, color:'rgb(234,69,90)'}} name="play" />
+                <Text style={{fontSize: 17, color:'rgb(234,69,90)', fontWeight:600}}>  재생</Text>
+              </View>
+            </TouchableHighlight>
+            <TouchableHighlight
+              title="aa"
+              style={{
+                height: 45,
+                width: '48%',
+                backgroundColor: 'rgb(247,248,251)',
+                borderRadius: 10,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+              onPress={() => Actions.popPlayer({data: of})}>
+              <View
+                style={{
+                  flex: 1,
+                  flexDirection: 'row',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <Icon style={{fontSize: 26, color:'rgb(234,69,90)'}} name="shuffle" />
+                <Text style={{fontSize: 17, color:'rgb(234,69,90)', fontWeight:600}}>  임의 재생</Text>
+              </View>
+            </TouchableHighlight>
           </View>
         </View>
 
@@ -80,16 +128,14 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   child: {
-    borderRadius: 10,
+    borderRadius: 5,
 
     width: '48%',
     aspectRatio: 0.8,
     marginBottom: 25,
-
-    backgroundColor: 'rgb(233,233,238)',
   },
   childImage: {
-    borderRadius: 10,
+    borderRadius: 5,
 
     // margin: '1%',
     flex: 1,
@@ -158,56 +204,3 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
 });
-
-const data = [
-  {
-    id: '0',
-    url: require('../assets/last.mp3'),
-    title: 'LAST (Feat. FR:EDEN',
-    artist: 'Alisha',
-    artwork: require('../assets/last.jpg'),
-  },
-  {
-    id: '1',
-    url: require('../assets/auaro.mp3'),
-    title: 'Aura',
-    artist: 'IOAH',
-    artwork: require('../assets/auaro.jpg'),
-  },
-  {
-    id: '2',
-    url: require('../assets/brazil.mp3'),
-    title: 'brazil',
-    artist: 'mt.tkovr.',
-    artwork: require('../assets/brazil.jpg'),
-  },
-  {
-    id: '3',
-    url: require('../assets/channel-57-vol-1.mp3'),
-    title: 'channel-57-vol-1',
-    artist: 'Coa white',
-    artwork: require('../assets/channel-57-vol-1.jpg'),
-  },
-  {
-    id: '4',
-    url: require('../assets/contra.mp3'),
-    title: 'contra',
-    artist: 'H A Y A K E',
-    artwork: require('../assets/contra.jpg'),
-  },
-  {
-    id: '5',
-    url: require('../assets/engine.mp3'),
-    title: 'engine',
-    artist: 'xxmaddox',
-    artwork: require('../assets/engine.jpg'),
-  },
-
-  {
-    id: '6',
-    url: require('../assets/Jetlag.mp3'),
-    title: 'Jetlag',
-    artist: 'GGMRecords',
-    artwork: require('../assets/Jetlag.jpg'),
-  },
-];

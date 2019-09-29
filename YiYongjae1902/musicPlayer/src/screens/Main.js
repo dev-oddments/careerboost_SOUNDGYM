@@ -25,7 +25,6 @@ import musicList from '../assets/musicList.json';
 export default class main extends Component {
   _renderList() {
     let listComplete = musicList.map((of, rowKey) => {
-      console.log(of.title);
       return (
         <CardItem
           key={rowKey}
