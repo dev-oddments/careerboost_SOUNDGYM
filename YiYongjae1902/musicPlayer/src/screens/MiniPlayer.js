@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, View, StyleSheet, TouchableOpacity, Slider} from 'react-native';
+import {Image, View, StyleSheet, TouchableOpacity, Slider, Dimensions} from 'react-native';
 import Icon from 'react-native-ionicons';
 import {Text, Button} from 'native-base';
 import {Actions} from 'react-native-router-flux';
@@ -7,6 +7,8 @@ import TrackPlayer from 'react-native-track-player';
 
 import ImageResize from '../components/ImageResize';
 import ProgressNow from '../components/ProgressNow';
+
+const {height: deviceHeight, width: deviceWidth} = Dimensions.get('window');
 
 export default class player extends TrackPlayer.ProgressComponent {
   state = {
@@ -39,6 +41,7 @@ export default class player extends TrackPlayer.ProgressComponent {
 
   render() {
     return (
+      <View style={{backgroundColor:"white"}}>
       <View style={styles.baseContainer}>
         <View style={styles.closeButton}>
           <TouchableOpacity
@@ -50,7 +53,7 @@ export default class player extends TrackPlayer.ProgressComponent {
         </View>
         <View style={styles.controller}>
           <Image
-            source={this.props.data.artwork}
+            source={{uri: this.props.data.artwork}}
             style={{width:70, height:70}}
           />
           <Text style={{fontSize: 20}}>
@@ -64,13 +67,15 @@ export default class player extends TrackPlayer.ProgressComponent {
           </TouchableOpacity>
         </View>
       </View>
+      </View>
+
     );
   }
 }
 
 const styles = StyleSheet.create({
   baseContainer: {
-    flex: 0.2,
+    height: deviceHeight * 0.15,
 
     shadowColor: '#000',
     shadowOffset: {

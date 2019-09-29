@@ -25,7 +25,7 @@ const ImageResize = props => {
   return (
     <View>
       <Image
-        source={props.img}
+        source={{uri: props.img}}
         style={
           props.isPlay == 'play'
             ? {height: 250, aspectRatio: 1}

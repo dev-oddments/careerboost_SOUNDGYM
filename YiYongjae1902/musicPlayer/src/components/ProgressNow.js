@@ -55,7 +55,11 @@ export default class ProgressNow extends TrackPlayer.ProgressComponent {
             value={this.state.isSeeking ? this.seek : this.state.position}
             style={{width: '80%'}}
             onSlidingComplete={val => {
-              TrackPlayer.play();
+              if (this.props.isPlay == 'pause') {
+                TrackPlayer.play();
+              } else {
+                TrackPlayer.pause();
+              }
               this.setState(() => {
                 TrackPlayer.seekTo(this.state.seek);
                 this.state.position = this.state.seek;

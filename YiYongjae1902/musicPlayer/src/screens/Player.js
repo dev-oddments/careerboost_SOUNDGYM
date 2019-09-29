@@ -58,7 +58,7 @@ export default class player extends TrackPlayer.ProgressComponent {
     Animated.timing(this.state.offset, {
       duration: 150,
       toValue: deviceHeight,
-    }).start(Actions.pop);
+    }).start(Actions.push('MinimizePlayer', {data: this.props.data, artwork: this.props.artwork, isPlay: this.state.isPlay}));
   }
 
   _togglePlay() {
